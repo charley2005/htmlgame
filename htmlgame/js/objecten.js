@@ -6,9 +6,10 @@ class Sprite {
     this.speedY = speedY;
     this.width = width;
     this.height = height;
+    this.rotation = 0;
     this.url = url;
     this.image = new Image();
-    this.rotation = 0;
+    this.alive = true;
     if (typeof url !== "undefined") {
       this.image.src = url;
     } else {
@@ -19,9 +20,9 @@ class Sprite {
   update() {
     this.x += this.speedX;
     this.y += this.speedY;
+    
   }
   draw() {
     ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
   }
 }
-

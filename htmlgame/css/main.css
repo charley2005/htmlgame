@@ -1,17 +1,17 @@
 #game {
-width: 100vw;
-height: 70vw;
-max-width: 133.33vw;
-max-height: 100vw;
+width: 50vw;
+height: 40vw;
+max-width: 50vw;
+max-height: 40vw;
 margin: auto;
-position: absolute;
+position: relative;
 top:0;bottom: 0;
 left: 0;right: 0;
 }
 
 #myCanvas {
-width: 90%;
-height: 90%;
+width: 100%;
+height: 100%;
 background-color: black;
 margin: auto;
 position: absolute;
@@ -21,3 +21,66 @@ border-radius: 10px;
 border-color: #c3c3c3;
 
 }
+@font-face {
+    font-family: myFont;
+    src: url(../fond/Minecraft.ttf);
+}
+*{
+    font-family: myFont;
+    color: white;
+}
+#score-leaderboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 80vw;
+    padding-top: 5vw;
+} 
+.container {
+    margin-left: 5vw;
+    padding-left: 5vw;
+  }
+  #gameOverScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Set a higher z-index than the canvas */
+  }
+  #restartButton {
+    background-color: transparent; /* Set the desired color */
+    color: #fff; /* Set the text color */
+    padding: 10px;
+    margin-top: 21vw;
+    margin-left: 18.7vw; /* Adjust the margin to position it under the score */
+    border: none;
+    cursor: pointer;
+  }
+  /* Add these styles for the start screen */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2; /* Ensure the start screen is on top of the canvas */
+  }
+  
+  #startButton {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: transparent; /* Set your desired color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  
